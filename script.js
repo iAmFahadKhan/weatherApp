@@ -33,7 +33,7 @@ let weather = {
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
         document.querySelector(".city").innerText = "Weather in " + name;
-        document.querySelector(".description").innerText = description;
+        document.querySelector(".description").innerText = 'condition:'+description;
         document.querySelector(".temp").innerText = temp.toFixed() + "°C";
         document.querySelector(".humidity").innerText =
             "Humidity: " + humidity + "%";
