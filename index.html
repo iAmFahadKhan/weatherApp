@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+    <div class="bg-video">
+        <video src="sunny.mp4" muted autoplay loop></video>
+    </div>
+    <div id="dark-mode-toggle" class="dark-mode-toggle">
+        <i class="fa fa-moon"></i>
+    </div>
+    <div class="card">
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="enter city...">
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        <div class="weather">
+            <h1 class="city">Weather in Ahmedabad</h1>
+            <h1 class="temp">34°C</h1>
+            <div class="details">
+                <div class="description">condition: sunny</div>
+                <div class="humidity">Humidity: 37%</div>
+                <div class="wind">Wind speed: 6.2 km/hr</div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">Developed by <a href="https://github.com/jsNoobSaiBot"><i class="fa-brands fa-github"></i> jsNoobSaiBot</a></div>
+    <script src="script.js"></script>
+</body>
+</html>
