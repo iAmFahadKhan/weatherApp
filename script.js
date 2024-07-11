@@ -33,7 +33,7 @@ let weather = {
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
         document.querySelector(".city").innerText = "Weather in " + name;
-        document.querySelector(".description").innerText = 'condition:'+description;
+        document.querySelector(".description").innerText ='condition:'+description;
         document.querySelector(".temp").innerText = temp.toFixed() + "°C";
         document.querySelector(".humidity").innerText =
             "Humidity: " + humidity + "%";
@@ -41,33 +41,35 @@ let weather = {
             "Wind speed: " + speed + " km/h";
         document.querySelector(".weather").classList.remove("loading");
 
-        
         const bgVideo = document.querySelector(".bg-video video");
         const videoSources = {
             clear: "sunny.mp4",
+            clearsky: "sunny.mp4",
             rain: "rain.mp4",
             snow: "cold.mp4",
+            'broken clouds':"rain.mp4",
             thunderstorm: "rain.mp4",
-            clouds: "windy.mp4",
+            clouds: "rain.mp4",
             mist: "mist.mp4",
             smoke: "fog.mp4",
-            haze: "sunny.mp4",
+            'few clouds': "cold.mp4", 
+            haze: "fog.mp4",
             dust: "mist.mp4",
             fog: "fog.mp4",
             sand: "sunny.mp4",
-            ash: "mist.mp4",
-    
+            'overcast clouds':"mist.mp4",
+            'moderate rain':'rain.mp4'
         };
-
+    
         
         if (videoSources.hasOwnProperty(description)) {
             const videoSource = videoSources[description];
             bgVideo.src = videoSource;
         } else {
-            // 
+            
             bgVideo.src = "sunny.mp4";
         }
-
+    
         
         bgVideo.load();
         bgVideo.play();
